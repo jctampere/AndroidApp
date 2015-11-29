@@ -1,0 +1,91 @@
+<!--
+  ~ Copyright (c) 2015-present, Parse, LLC.
+  ~ All rights reserved.
+  ~
+  ~ This source code is licensed under the BSD-style license found in the
+  ~ LICENSE file in the root directory of this source tree. An additional grant
+  ~ of patent rights can be found in the PATENTS file in the same directory.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+    android:clickable="true"
+    android:onClick="signUP">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/instagramminiicon"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/LogoText"
+        android:layout_toStartOf="@+id/LogoText"
+        android:contentDescription="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instagram Mini"
+        android:id="@+id/LogoText"
+        android:textSize="35sp"
+        android:textIsSelectable="false"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="37dp"
+        android:textColor="#4e32ff" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameEditText"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="44dp"
+        android:textSize="25sp"
+        android:hint="Username"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordEditText"
+        android:hint="Password"
+        android:textSize="25sp"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:id="@+id/signInUpButton"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:onClick="signInOrUp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:id="@+id/signUpText"
+        android:textSize="20sp"
+        android:textColor="#2f6aff"
+        android:onClick="switchSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signInUpButton"
+        android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>
